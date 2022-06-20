@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>原理演示</title>
+    <style>
+        #result{
+            height:200px;
+            width:200px;
+            border:solid 2px lightcoral;
+        }
+    </style>
+</head>
+<body>
+    <div id="result"></div>
+     <!-- <script src="./js/app.js"></script>  借助src引入外部资源 -->
+     <!-- <script src="http://127.0.0.1:5500/%E8%B7%A8%E5%9F%9F/2-JSONP/js/app.js"></script> -->
+     <script>
+        function handle(data){
+    // 获取result元素
+    const result=document.getElementById('result');
+    result.innerHTML=data.name;
+}
+     </script>
+     <script src="http://localhost:8000/jsonp-server">
+        
+     </script>
+</body>
+</html>
